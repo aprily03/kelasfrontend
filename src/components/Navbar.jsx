@@ -1,4 +1,3 @@
-
 function Navbar() {
   return (
     <nav className="bg-white border-b border-gray-200">
@@ -17,14 +16,8 @@ function Navbar() {
           <a href="#about" className="text-gray-600 hover:text-blue-600">
             About
           </a>
-          <a
-            onClick={() => {
-              setOpenLoginPage(true);
-            }}
-            href="#"
-            className="text-gray-600 hover:text-blue-600"
-          >
-            Login
+          <a href="#" className="text-gray-600 hover:text-blue-600">
+            Contact
           </a>
         </div>
       </div>
