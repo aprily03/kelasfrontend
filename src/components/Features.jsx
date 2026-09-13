@@ -18,28 +18,6 @@ const features = [
   },
 ];
 const usia = 25;
-const mhs = [
-  {
-    id: 1,
-    nama: "Enrico",
-    age: 20,
-  },
-  {
-    id: 2,
-    nama: "Mike",
-    age: 21,
-  },
-  {
-    id: 3,
-    nama: "Lisa",
-    age: 23,
-  },
-  {
-    id: 4,
-    nama: "Maria",
-    age: 23,
-  },
-];
 
 function Features() {
   return (
@@ -48,9 +26,6 @@ function Features() {
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900">Features</h2>
 
-          {mhs.map((mahasiswa) => (
-            <Greetings nama={mahasiswa.nama} age={mahasiswa.age}></Greetings>
-          ))}
           <p className="mt-3 text-gray-600">
             Everything is built using React and Tailwind CSS.
           </p>
