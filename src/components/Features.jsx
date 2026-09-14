@@ -1,5 +1,4 @@
 import FeatureList from "./props/FeatureList";
-import Greetings from "./props/Greetings";
 const features = [
   {
     id: 1,
@@ -17,7 +16,6 @@ const features = [
     description: "Tailwind CSS makes it easy to build responsive layouts.",
   },
 ];
-const usia = 25;
 
 function Features() {
   return (
