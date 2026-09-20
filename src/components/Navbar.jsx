@@ -5,19 +5,22 @@ function Navbar() {
         <h1 className="text-2xl font-bold text-blue-600">Kelas Front-End</h1>
 
         <div className="flex gap-6">
-          <a href="#" className="text-gray-600 hover:text-blue-600">
+          <a href="/" className="text-gray-600 hover:text-blue-600">
             Home
           </a>
 
-          <a href="#" className="text-gray-600 hover:text-blue-600">
+          <a href="/features" className="text-gray-600 hover:text-blue-600">
             Features
           </a>
 
-          <a href="#" className="text-gray-600 hover:text-blue-600">
+          <a href="/about" className="text-gray-600 hover:text-blue-600">
             About
           </a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">
+          <a href="/contact" className="text-gray-600 hover:text-blue-600">
             Contact
+          </a>
+          <a href="/useref" className="text-gray-600 hover:text-blue-600">
+            useRef
           </a>
         </div>
       </div>
