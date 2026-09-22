@@ -22,6 +22,9 @@ function Navbar() {
           <a href="/useref" className="text-gray-600 hover:text-blue-600">
             useRef
           </a>
+          <a href="/useeffect" className="text-gray-600 hover:text-blue-600">
+            useEffect
+          </a>
         </div>
       </div>
     </nav>

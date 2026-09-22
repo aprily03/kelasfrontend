@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Features from "./pages/Features";
 import Contact from "./pages/Contact";
 import UseRef from "./pages/UseRef";
+import UseEffect from "./pages/UseEffect";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/features" element={<Features />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/useref" element={<UseRef />} />
+          <Route path="/useeffect" element={<UseEffect />} />
         </Routes>
       </BrowserRouter>
     </div>
