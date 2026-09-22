@@ -27,14 +27,18 @@ function CounterWithState() {
 // Setiap tombol diklik, count.current berubah TAPI komponen TIDAK render ulang,
 // sehingga angka di layar tidak ikut berubah (walau nilainya sudah berubah).
 function CounterWithRef() {
+  const count = useRef(0);
+  const [count2, setCount2] = useState(0);
 
   const handleClick = () => {
+    count.current = count.current + 1;
+    setCount2((prevCount2) => prevCount2 + 1);
   };
 
   return (
     <div className="rounded-lg border border-gray-200 p-6">
       <h3 className="mb-2 font-semibold text-gray-900">useRef</h3>
-      <p className="mb-4 text-3xl font-bold text-amber-600">0</p>
+      <p className="mb-4 text-3xl font-bold text-amber-600">{count.current}</p>
       <button
         onClick={handleClick}
         className="rounded-lg bg-amber-500 px-4 py-2 text-white hover:bg-amber-600"
