@@ -9,8 +9,7 @@ export default function UseEffect() {
             Contoh <span className="text-blue-600">useEffect</span>
           </h1>
           <p className="mt-3 text-gray-600 text-sm">
-            Tiga pola dependency array yang paling sering dipakai (buka
-            console untuk melihat kapan efek jalan)
+            Tiga pola dependency array yang paling sering dipakai 
           </p>
         </header>
 
