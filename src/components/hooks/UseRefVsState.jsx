@@ -4,14 +4,20 @@ import { useRef, useState } from "react";
 // Setiap tombol diklik, count berubah DAN komponen render ulang,
 // sehingga angka di layar langsung ikut berubah.
 function CounterWithState() {
-  const [count, setCount] = useState(0);
+  const countRef = useRef(0);
+  const [count, setCount2] = useState(0);
+
+  const handleclick = () => {
+    countRef.current = countRef.current + 2;
+    setCount2((prevCount2) => prevCount2 + 1);
+  };
 
   return (
     <div className="rounded-lg border border-gray-200 p-6">
       <h3 className="mb-2 font-semibold text-gray-900">useState</h3>
       <p className="mb-4 text-3xl font-bold text-blue-600">{count}</p>
       <button
-        onClick={() => setCount(count + 1)}
+        onClick={() => handleclick}
         className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
       >
         Tambah
