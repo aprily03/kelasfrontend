@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export default function FetchApi() {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
+<<<<<<< HEAD
   const [weather, setWeather] = useState(null);
   const [quake, setQuake] = useState(null);
   
@@ -36,6 +37,27 @@ export default function FetchApi() {
     
     getData();
   }, []);
+=======
+  const [posts, setPosts] = useState([]);
+
+  // 2. Ambil data dari API satu kali saat halaman pertama kali dibuka
+  useEffect(() => {
+    async function getUsers() {
+      const url = "https://jsonplaceholder.typicode.com/users";
+      const response = await fetch(url);
+      const data = await response.json();
+      setUsers(data);
+    }
+    async function getPosts() {
+      const url = "https://jsonplaceholder.typicode.com/posts";
+      const response = await fetch(url);
+      const data = await response.json();
+      setPosts(data);
+    }
+    getUsers();
+    getPosts();
+  },[]);
+>>>>>>> 620f23db88361c85dcbd918a323a1b999e031afc
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
@@ -91,8 +113,24 @@ export default function FetchApi() {
             key={post.id}
             className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm"
           >
+<<<<<<< HEAD
             <h2 className="font-semibold text-gray-900 capitalize">{post.title}</h2>
             <p className="text-sm text-gray-600 mt-2">{post.body}</p>
+=======
+            <h2 className="font-semibold text-gray-900">{user.name}</h2>
+            <p className="text-sm text-gray-600">{user.email}</p>
+            <p className="text-sm text-gray-600">{user.address.suite}</p>
+          </div>
+        ))}
+        {posts.map((post) => (
+          <div
+            key={post.id}
+            className="rounded-lg border border-gray-200 bg-white p-4"
+          >
+            <h2 className="font-semibold text-gray-900">{post.title}</h2>
+            {/* <p className="text-sm text-gray-600">{post.title}</p> */}
+            <p className="text-sm text-gray-600">{post.body}</p>
+>>>>>>> 620f23db88361c85dcbd918a323a1b999e031afc
           </div>
         ))}
       </div>
